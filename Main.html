@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nightmares</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+<body>
+    <header>
+        <h1>TwistedMind<h1>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#card-section">Cards</a></li>
+            <li><a href="#section-absurdness">Descriptions</a></li>
+            <li><a href="#section-draw_cards">Draw Card</a></li>
+        </ul>
+    </header>
+
+    <audio id="backgroundMusic" src="static/audio/bgmusic.mp3" loop></audio>
+    
+
+<div id="musicControls" style="position: fixed; bottom: 20px; right: 20px; background: rgba(0, 0, 0, 0.607); padding: 10px; border-radius: 10px; color: white; z-index: 999; ">
+   
+  <div id="visualizer" style="font-size: 18px; letter-spacing: 2px; text-align: center; margin-bottom: 5px;">•၊၊||၊|။||||။၊|။•</div>
+  <button id="musicToggleBtn" style="background-color:rgba(72, 72, 72, 0.641); color:white; padding: 2px 5px">▶</button>
+
+  <label for="volumeControl" style="font-family:myFont; font-size:10px;">Volume</label>
+ 
+ <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1">
+</div>
+    <div class="sec">
+        <h1>What Are Your Nightmares?</h1>
+        <P>Nightmares are just the brain's way of screaming what the heart can't say aloud.</P>
+        <br>
+        <a href="#card-section" class="explore-btn" >Explore</a>
+        
+    </div>
+    
+    <section class="card-section" id="card-section">
+        
+        <div class="card" ><img src="static/absurdness.jpg" alt="absurdness" id="absurdness"></div>
+        <div class="card"><img src="static/anxiety.jpg" alt="anxiety" id="anxiety"></div>
+        <div class="card"><img src="static/apathy.jpg" alt="apathy" id="apathy"></div>
+        <div class="card"><img src="static/lost.jpg" alt="lost" id="lost"></div>
+        <div class="card"><img src="static/hate.jpg" alt="hate" id="hate"></div>
+        <div class="card"><img src="static/doubt.jpg" alt="doubt" id="doubt"></div>
+        <div class="card"><img src="static/evade.jpg" alt="evade" id="evade"></div>
+        <div class="card"><img src="static/omega.jpg" alt="omega" id="omega"></div>
+        <div class="card"><img src="static/scorn.jpg" alt="scorn" id="scorn"></div>
+        <div class="card"><img src="static/cafard.jpg" alt="cafard" id="cafard"></div>
+        <div class="card"><img src="static/deceit.jpg" alt="deceit" id="deceit"></div>
+        <div class="card"><img src="static/lonely.jpg" alt="lonely" id="lonely"></div>
+        <div class="card"><img src="static/memory.jpg" alt="memory" id="memory"></div>
+        <div class="card"><img src="static/regret.jpg" alt="regret" id="regret"></div>
+        <div class="card"><img src="static/vanity.jpg" alt="vanity" id="vanity"></div>
+        <div class="card"><img src="static/despair.jpg" alt="despair" id="despair"></div>
+        <div class="card"><img src="static/revenge.jpg" alt="revenge" id="revenge"></div>
+        <div class="card"><img src="static/slander.jpg" alt="slander" id="slander"></div>
+        <div class="card"><img src="static/inferior.jpg" alt="inferior" id="inferior"></div>
+        <div class="card"><img src="static/hypocrisy.jpg" alt="hypocrisy" id="hypocrisy"></div>
+        <div class="card"><img src="static/prejudice.jpg" alt="prejudice" id="prejudice"></div>
+        <div class="card"><img src="static/rash.jpg" alt="rash" id="rash"></div>
+    </section>
+   <br>
+   <div class="sec1" id="section-absurdness">
+    <div class="card"><img src="static/absurdness.jpg" alt="absurdness"></div>
+    <p><strong>Absurdness</strong> - world where logic crumbles and reality spirals into nonsense—nothing makes sense, and the more you try to understand, the more lost you become.</p>
+</div>
+<br>
+    <div class="sec1" id="section-anxiety">
+        <div class="card"><img src="static/anxiety.jpg" alt="anxiety"></div>
+        <p><strong>Anxiety</strong> - A suffocating chase through endless corridors, never caught but never free—your fears wear faces, and they’re always watching.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-apathy">
+        <div class="card"><img src="static/apathy.jpg" alt="apathy"></div>
+        <p><strong>Apathy</strong> - A colorless void where nothing matters, and your screams echo unheard. You feel, but the world no longer reacts.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-lost">
+        <div class="card"><img src="static/lost.jpg" alt="lost"></div>
+        <p><strong>Lost</strong> - Wandering a familiar place that shifts with every step—home is always just out of reach, and every turn leads nowhere.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-hate">
+        <div class="card"><img src="static/hate.jpg" alt="hate"></div>
+        <p><strong>Hate</strong> - Your veins burn with a rage you don’t recognize as your own. You destroy everything you love, and wake up with your hands clenched.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-doubt">
+        <div class="card"><img src="static/doubt.jpg" alt="doubt"></div>
+        <p><strong>Doubt</strong> - Every decision you make in the dream unravels into failure—no truth is solid, and you second-guess your own existence.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-evade">
+        <div class="card"><img src="static/evade.jpg" alt="evade"></div>
+        <p><strong>Evade</strong> - You're always running, but never know what from. The more you avoid it, the more it becomes a part of you.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-omega">
+        <div class="card"><img src="static/omega.jpg" alt="omega"></div>
+        <p><strong>Omega</strong> - The end of all things. A haunting stillness where time has stopped and you are the last echo of a forgotten universe.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-scorn">
+        <div class="card"><img src="static/scorn.jpg" alt="scorn"></div>
+        <p><strong>Scorn</strong> - Eyes glare at you from the dark, whispering your flaws. You wear your shame like skin that never peels off.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-cafard">
+        <div class="card"><img src="static/cafard.jpg" alt="cafard"></div>
+        <p><strong>Cafard</strong> - An oppressive melancholy coats everything. You can’t move, can’t scream, only feel the weight of an invisible sorrow crushing your soul.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-deceit">
+        <div class="card"><img src="static/deceit.jpg" alt="deceit"></div>
+        <p><strong>Deceit</strong> - Everyone wears a mask—and so do you. But you can’t remember what your real face looked like.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-lonely">
+        <div class="card"><img src="static/lonely.jpg" alt="lonely"></div>
+        <p><strong>Lonely</strong> - You scream in a crowd, but no one sees you. You exist, but only as a ghost haunting your own life.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-memory">
+        <div class="card"><img src="static/memory.jpg" alt="memory"></div>
+        <p><strong>Memory</strong> - Fragments of the past replay on a broken projector—distorted, painful, and inescapable.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-regret">
+        <div class="card"><img src="static/regret.jpg" alt="regret"></div>
+        <p><strong>Regret</strong> - Every wrong choice replays in perfect clarity. You try to undo them, but the outcome never changes.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-vanity">
+        <div class="card"><img src="static/vanity.jpg" alt="vanity"></div>
+        <p><strong>Vanity</strong> - Surrounded by mirrors that show only your flaws—your reflection mocks you, and every gaze feels like judgment.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-despair">
+        <div class="card"><img src="static/despair.jpg" alt="despair"></div>
+        <p><strong>Despair</strong> - An endless fall into blackness—no ground to hit, no hope to grasp. Just the slow, certain sinking.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-revenge">
+        <div class="card"><img src="static/revenge.jpg" alt="revenge"></div>
+        <p><strong>Revenge</strong> - You finally get even, but feel emptier than before. The satisfaction rots the moment it’s tasted.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-slander">
+        <div class="card"><img src="static/slander.jpg" alt="slander"></div>
+        <p><strong>Slander</strong> - Your name is dragged through blood and ink. Everyone believes the lies but you—your voice is gone.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-inferior">
+        <div class="card"><img src="static/inferior.jpg" alt="inferior"></div>
+        <p><strong>Inferior</strong> - You shrink in size while the world grows around you. Nothing you do is enough; everything you are is less.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-hypocrisy">
+        <div class="card"><img src="static/hypocrisy.jpg" alt="hypocrisy"></div>
+        <p><strong>Hypocrisy</strong> - You condemn monsters while wearing their mask. Your lies smell like perfume, but they still choke you.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-prejudice">
+        <div class="card"><img src="static/prejudice.jpg" alt="prejudice"></div>
+        <p><strong>Prejudice</strong> - Judged before you speak, hated before you're seen—trapped in a cycle where truth is irrelevant.</p>
+    </div>
+    <br>
+    <div class="sec1" id="section-rash">
+        <div class="card"><img src="static/rash.jpg" alt="rash"></div>
+        <p><strong>Rash</strong> - A storm of impulsive choices that crash down like waves—by the time you realize the damage, it’s far too late.</p>
+    </div>
+    <br>
+  <div class="nav-arrows" id="navArrows">
+    <a href="#" id="arrowUp" class="arrow up">▲</a>
+    <a href="#" id="arrowDown" class="arrow down">▼</a>
+</div>
+
+<section class="sec-nightmare" id="section-draw_cards">
+    <div class="card-container">
+      <div id="flipCard" class="flip-card" tabindex="0" aria-label="Nightmare card, click to flip">
+        <div class="card-face card-front" id="cardFront">
+         
+        </div>
+        <div class="card-face card-back" id="cardBack">
+         
+        </div>
+      </div>
+    </div>
+<div class="nightmare-name" id="nightmareName" aria-live="polite"></div>
+<br>
+    <button id="drawCardBtn" aria-pressed="false" aria-label="Draw a new nightmare card">Draw a Nightmare Card</button>
+    
+  </section>
+<audio id="flipSound" src="static/audio/flipcard.mp3" preload="auto"></audio>
+<audio id="shuffleSound" src="static/audio/spincard.mp3" preload="auto"></audio>
+
+    <script>
+
+      const flip = new Audio("static/audio/pageturn.mp3");
+
+
+function playFlipSound(e) {
+  flip.currentTime = 0; 
+  flip.play();
+}
+
+
+const clickableSelectors = [
+  'header a',           
+  '.explore-btn',      
+  '#navArrows a'         
+];
+
+clickableSelectors.forEach(selector => {
+  document.querySelectorAll(selector).forEach(el => {
+    el.addEventListener('click', playFlipSound);
+  });
+});
+
+        const imageIds = [
+  "absurdness", "anxiety", "apathy", "lost", "hate", "doubt", "evade", "omega", "scorn",
+  "cafard", "deceit", "lonely", "memory", "regret", "vanity", "despair",
+  "revenge", "slander", "inferior", "hypocrisy", "prejudice", "rash"
+];
+
+
+const backgroundMusic = document.getElementById('backgroundMusic');
+const volumeControl = document.getElementById('volumeControl');
+const musicToggleBtn = document.getElementById('musicToggleBtn');
+const visualizer = document.getElementById('visualizer');
+
+let isPlaying = false;
+let visualizerFrames = [
+  '•၊၊||၊|။||||။၊|။•',
+  '•|။||၊|။|၊|။|၊||•',
+  '•|||၊||။||၊|။|||•',
+  '•|၊|။||၊|||။||၊|•',
+  '•|||။၊||။|၊||။||•'
+];
+let visualizerIndex = 0;
+let visualizerInterval;
+
+
+backgroundMusic.volume = volumeControl.value;
+
+
+
+
+volumeControl.addEventListener('input', () => {
+  backgroundMusic.volume = volumeControl.value;
+});
+
+
+musicToggleBtn.addEventListener('click', () => {
+  if (backgroundMusic.paused) {
+    backgroundMusic.play();
+    musicToggleBtn.textContent = '⏸';
+    isPlaying = true;
+    startVisualizer();
+  } else {
+    backgroundMusic.pause();
+    musicToggleBtn.textContent = '▶';
+    isPlaying = false;
+    stopVisualizer();
+  }
+});
+
+function startVisualizer() {
+  if (visualizerInterval) return;
+  visualizerInterval = setInterval(() => {
+    visualizer.textContent = visualizerFrames[visualizerIndex % visualizerFrames.length];
+    visualizerIndex++;
+  }, 200); 
+}
+
+function stopVisualizer() {
+  clearInterval(visualizerInterval);
+  visualizerInterval = null;
+  visualizer.textContent = '•၊၊||၊|။||||။၊|။•';
+}
+
+
+
+
+imageIds.forEach(id => {
+  const img = document.getElementById(id);
+  if (img) {
+    img.style.cursor = 'pointer'; 
+    img.addEventListener('click', () => {
+      const targetSection = document.getElementById(`section-${id}`);
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+});
+
+
+  const navArrows = document.getElementById('navArrows');
+    const arrowUp = document.getElementById('arrowUp');
+    const arrowDown = document.getElementById('arrowDown');
+    const sections = Array.from(document.querySelectorAll('.sec1'));
+
+    
+    window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + window.innerHeight / 2;
+
+        let inSec1 = false;
+        sections.forEach((sec, index) => {
+            const rect = sec.getBoundingClientRect();
+            const top = window.scrollY + rect.top;
+            const bottom = top + rect.height;
+
+            if (scrollPos >= top && scrollPos <= bottom) {
+                inSec1 = true;
+
+                
+                if (sections[index - 1]) {
+                    arrowUp.href = `#${sections[index - 1].id}`;
+                    arrowUp.style.display = 'block';
+                } else {
+                    arrowUp.style.display = 'none';
+                }
+
+                if (sections[index + 1]) {
+                    arrowDown.href = `#${sections[index + 1].id}`;
+                    arrowDown.style.display = 'block';
+                } else {
+                    arrowDown.style.display = 'none';
+                }
+            }
+        });
+
+        navArrows.style.display = inSec1 ? 'flex' : 'none';
+    });
+
+
+  const nightmareCards = [
+  {
+    name: "Absurdness",
+    description: "A world where logic crumbles and reality spirals into nonsense—nothing makes sense, and the more you try to understand, the more lost you become.",
+    image: "static/absurdness.jpg"
+  },
+  {
+    name: "Anxiety",
+    description: "A suffocating chase through endless corridors, never caught but never free—your fears wear faces, and they’re always watching.",
+    image: "static/anxiety.jpg"
+  },
+  {
+    name: "Apathy",
+    description: "A colorless void where nothing matters, and your screams echo unheard. You feel, but the world no longer reacts.",
+    image: "static/apathy.jpg"
+  },
+  {
+    name: "Lost",
+    description: "Wandering a familiar place that shifts with every step—home is always just out of reach, and every turn leads nowhere.",
+    image: "static/lost.jpg"
+  },
+  {
+    name: "Hate",
+    description: "Your veins burn with a rage you don’t recognize as your own. You destroy everything you love, and wake up with your hands clenched.",
+    image: "static/hate.jpg"
+  },
+  {
+    name: "Doubt",
+    description: "Every decision you make in the dream unravels into failure—no truth is solid, and you second-guess your own existence.",
+    image: "static/doubt.jpg"
+  },
+  {
+    name: "Evade",
+    description: "You're always running, but never know what from. The more you avoid it, the more it becomes a part of you.",
+    image: "static/evade.jpg"
+  },
+  {
+    name: "Omega",
+    description: "The end of all things. A haunting stillness where time has stopped and you are the last echo of a forgotten universe.",
+    image: "static/omega.jpg"
+  },
+  {
+    name: "Scorn",
+    description: "Eyes glare at you from the dark, whispering your flaws. You wear your shame like skin that never peels off.",
+    image: "static/scorn.jpg"
+  },
+  {
+    name: "Cafard",
+    description: "An oppressive melancholy coats everything. You can’t move, can’t scream, only feel the weight of an invisible sorrow crushing your soul.",
+    image: "static/cafard.jpg"
+  },
+  {
+    name: "Deceit",
+    description: "Everyone wears a mask—and so do you. But you can’t remember what your real face looked like.",
+    image: "static/deceit.jpg"
+  },
+  {
+    name: "Lonely",
+    description: "You scream in a crowd, but no one sees you. You exist, but only as a ghost haunting your own life.",
+    image: "static/lonely.jpg"
+  },
+  {
+    name: "Memory",
+    description: "Fragments of the past replay on a broken projector—distorted, painful, and inescapable.",
+    image: "static/memory.jpg"
+  },
+  {
+    name: "Regret",
+    description: "Every wrong choice replays in perfect clarity. You try to undo them, but the outcome never changes.",
+    image: "static/regret.jpg"
+  },
+  {
+    name: "Vanity",
+    description: "Surrounded by mirrors that show only your flaws—your reflection mocks you, and every gaze feels like judgment.",
+    image: "static/vanity.jpg"
+  },
+  {
+    name: "Despair",
+    description: "An endless fall into blackness—no ground to hit, no hope to grasp. Just the slow, certain sinking.",
+    image: "static/despair.jpg"
+  },
+  {
+    name: "Revenge",
+    description: "You finally get even, but feel emptier than before. The satisfaction rots the moment it’s tasted.",
+    image: "static/revenge.jpg"
+  },
+  {
+    name: "Slander",
+    description: "Your name is dragged through blood and ink. Everyone believes the lies but you—your voice is gone.",
+    image: "static/slander.jpg"
+  },
+  {
+    name: "Inferior",
+    description: "You shrink in size while the world grows around you. Nothing you do is enough; everything you are is less.",
+    image: "static/inferior.jpg"
+  },
+  {
+    name: "Hypocrisy",
+    description: "You condemn monsters while wearing their mask. Your lies smell like perfume, but they still choke you.",
+    image: "static/hypocrisy.jpg"
+  },
+  {
+    name: "Prejudice",
+    description: "Judged before you speak, hated before you're seen—trapped in a cycle where truth is irrelevant.",
+    image: "static/prejudice.jpg"
+  },
+  {
+    name: "Rash",
+    description: "A storm of impulsive choices that crash down like waves—by the time you realize the damage, it’s far too late.",
+
+    image: "static/rash.jpg"
+  }
+]
+
+
+   const flipCard = document.getElementById('flipCard');
+const cardFront = document.getElementById('cardFront');
+const cardBack = document.getElementById('cardBack');
+const drawCardBtn = document.getElementById('drawCardBtn');
+const nightmareName = document.getElementById('nightmareName');
+const flipSound = document.getElementById('flipSound');
+const shuffleSound = document.getElementById('shuffleSound');
+
+let currentCardIndex = null;
+
+
+function loadCard(index) {
+  const card = nightmareCards[index];
+  cardFront.innerHTML = `
+    <p>${card.description}</p>
+    <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #888;">
+      Flip the card to see your nightmare
+    </p>
+  `;
+  cardBack.innerHTML = `<img src="${card.image}" alt="${card.name} image" />`;
+  nightmareName.textContent = card.name;
+  flipCard.classList.remove('flip');
+  flipCard.setAttribute('aria-pressed', 'false');
+}
+
+
+flipCard.addEventListener('click', () => {
+  flipSound.currentTime = 0;
+  flipSound.play();
+
+  flipCard.classList.toggle('flip');
+  const isFlipped = flipCard.classList.contains('flip');
+  flipCard.setAttribute('aria-pressed', isFlipped.toString());
+});
+
+
+flipCard.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    flipSound.currentTime = 0;
+    flipSound.play();
+    flipCard.click();
+  }
+});
+
+
+drawCardBtn.addEventListener('click', () => {
+  let newIndex;
+  do {
+    newIndex = Math.floor(Math.random() * nightmareCards.length);
+  } while (newIndex === currentCardIndex && nightmareCards.length > 1);
+
+ 
+  shuffleSound.currentTime = 0;
+  shuffleSound.play();
+
+  
+  flipCard.classList.add('spin-before-load');
+
+  setTimeout(() => {
+    currentCardIndex = newIndex;
+    loadCard(currentCardIndex);
+
+    
+    flipCard.classList.remove('spin-before-load');
+  }, 990); 
+});
+
+
+cardFront.innerHTML = `<p style="font-weight:bold; font-size: 1.1rem; font-family: myFont1;">Know Your Nightmare</p>`;
+cardBack.innerHTML = `<p style="opacity: 0.6; color: #ffed96; font-style: italic; font-weight:bold;">Draw to reveal your card</p>`;
+cardFront.innerHTML = `
+  <p>${card.description}</p>
+  <p style="margin-top: 1rem; font-style: italic; font-size: 0.9rem; color: #caa43082;">
+    Flip the card to see your nightmare
+  </p>
+`;
+nightmareName.textContent = '';
+
+
+    </script>
+    <div class="credits">
+<h3>Credits to the artwork of: @Midnightyz98 (from X). Created by Rance Gabrielle G. Siroy · Built with HTML + CSS + JavaScript</h3>
+</div>
+</body>
+</html>

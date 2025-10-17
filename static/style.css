@@ -1,0 +1,685 @@
+@font-face{
+    font-family: myFont;
+    src:url(Roman\ SD.ttf)
+}
+@font-face{
+    font-family: myFont1;
+    src:url(CWDRKAGE.TTF)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 150vh;
+    background-image: url('bg1.jpg');
+    background-size: cover;            /* Make image cover the whole body */
+    background-position: center;       /* Center the image */
+    background-repeat: no-repeat;      /* Prevent it from repeating */
+    background-attachment: fixed;      /* Optional: scroll effect */
+    background-blend-mode: overlay;    /* Optional: blend with gradient */
+    background-color: #1d1c1893;         /* Fallback color or used in blend */
+
+    /* Remove object-fit: not valid here */
+}
+
+
+
+header {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Increased z-index to make sure it stays above other elements */
+    background-color: rgba(0, 0, 0, 0.736); /* Optional: adds background so content behind doesn't bleed through */
+    backdrop-filter: blur(10px); /* Optional: gives a glass effect */
+}
+header h1{
+    font-size: 30px;
+    color:white;
+    font-family: myFont;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: myFont;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: myFont;
+}
+
+header ul li a:hover, header ul li a.active {
+    background-color: #fff;
+    color: black;
+}
+
+
+/* --- CARD STYLES --- */
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    gap: 16px;
+    padding: 80px 10px 40px; 
+    background-color: #00000089;
+    border-radius: 5px;
+     box-shadow: 0 10px 100px rgba(0, 0, 0, 2.971);
+}
+
+.card {
+    background-color: rgba(11, 11, 11, 0.49);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.356);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.sec h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    font-family: myFont;
+}
+.sec p {
+    color: #fff;
+    font-size: 14px;
+    font-family: myFont1;
+    
+}
+
+.sec .explore-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffffcc; /* semi-transparent white */
+    color: #1d1c18;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-family: myFont;
+}
+
+.explore-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sec1 {
+    min-height: 75vh;
+    display: flex;
+    align-items: center; /* vertically center content */
+    gap: 30px;            /* space between image and text */
+    padding: 40px 25px;
+    max-width: 1200px;
+    margin: 0 auto;       /* center the container */
+    margin-top: 310px;
+    background-color: #111111c4;
+    border-radius: 30px;
+     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.871);
+}
+
+
+
+.sec1 .card img {
+    width: 280px;         /* set image width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.sec1 p {
+    font-size: 18px;
+    color: #fff;          /* change based on your background */
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+
+
+@media (max-width: 768px) {
+    .card-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-info p {
+        max-width: 100%;
+    }
+}
+
+.nav-arrows {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    margin-bottom: 250px;
+}
+
+.arrow {
+    background-color: rgba(255, 255, 255, 0.112);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px 20px;
+    border-radius: 20%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+ @font-face{
+    font-family: myFont;
+    src:url(Roman\ SD.ttf)
+}
+@font-face{
+    font-family: myFont1;
+    src:url(CWDRKAGE.TTF)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 150vh;
+    background-image: url('bg1.jpg');
+    background-size: cover;            /* Make image cover the whole body */
+    background-position: center;       /* Center the image */
+    background-repeat: no-repeat;      /* Prevent it from repeating */
+    background-attachment: fixed;      /* Optional: scroll effect */
+    background-blend-mode: overlay;    /* Optional: blend with gradient */
+    background-color: #1d1c1893;         /* Fallback color or used in blend */
+
+    /* Remove object-fit: not valid here */
+}
+
+
+
+header {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 11px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Increased z-index to make sure it stays above other elements */
+    background-color: rgba(0, 0, 0, 0.736); /* Optional: adds background so content behind doesn't bleed through */
+    backdrop-filter: blur(10px); /* Optional: gives a glass effect */
+}
+
+header .logo {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: myFont;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: myFont;
+}
+
+header ul li a:hover, header ul li a.active {
+    background-color: #fff;
+    color: black;
+}
+
+
+/* --- CARD STYLES --- */
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+    gap: 16px;
+    padding: 80px 10px 40px; 
+    background-color: #0000009b;
+    border-radius: 5px;
+     box-shadow: 0 10px 100px rgba(0, 0, 0, 2.971);
+}
+
+.card {
+    background-color: rgba(11, 11, 11, 0.49);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.356);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    z-index: 2;
+    
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    text-align: center;
+}
+
+.sec h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    font-family: myFont;
+}
+.sec p {
+    color: #fff;
+    font-size: 14px;
+    font-family: myFont1;
+    
+}
+
+.explore-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffffcc; /* semi-transparent white */
+    color: #1d1c18;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-family: myFont;
+}
+
+.explore-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.sec1 {
+    min-height: 75vh;
+    display: flex;
+    align-items: center; /* vertically center content */
+    gap: 30px;            /* space between image and text */
+    padding: 40px 25px;
+    max-width: 1200px;
+    margin: 0 auto;       /* center the container */
+    margin-top: 310px;
+    background-color: #111111c4;
+    border-radius: 30px;
+     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.871);
+}
+
+
+
+.sec1 .card img {
+    width: 280px;         /* set image width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.sec1 p {
+    font-size: 18px;
+    color: #fff;          /* change based on your background */
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+
+
+@media (max-width: 768px) {
+    .card-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-info p {
+        max-width: 100%;
+    }
+
+    
+}
+
+.nav-arrows {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+    margin-bottom: 250px;
+}
+
+.arrow {
+    background-color: rgba(255, 255, 255, 0.112);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 20px 20px;
+    border-radius: 20%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+   .sec-nightmare {
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      font-family: myFont1;
+    }
+
+    .card-container {
+      perspective: 1000px;
+      margin-bottom: 20px;
+    }
+
+    .flip-card {
+      width: 250px;
+      height: 350px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.723);
+    }
+
+    .flip-card.flip {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      font-size: 17px;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+      padding: 15px;
+      box-sizing: border-box;
+        box-shadow: 0 4px 8px rgba(0,0,0,1.5);
+    }
+
+    .card-front {
+  background-image: url(cardback.jpg);
+  background-size: cover;        /* This makes the background image cover the entire element */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents tiling */
+  color: white;
+  flex-direction: column;
+  padding: 20px;
+}
+
+    .card-back {
+      transform: rotateY(180deg);
+      background: #080808e5;
+      background-image: url(cardback.jpg);
+  background-size: cover;        /* This makes the background image cover the entire element */
+  background-position: center;   /* Centers the image */
+  background-repeat: no-repeat;
+      padding: 0;
+    }
+
+    .card-back img {
+      width: 100%;
+      height: 100%;
+      border: 4px solid rgb(101, 89, 63);
+      border-style: groove;
+      border-radius: 12px;
+      z-index: 1000;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    #drawCardBtn {
+      padding: 12px 20px;
+      font-size: 15px;
+      background: rgba(127, 105, 59, 0.527);
+      color: white;
+       border: 3px solid rgb(95, 69, 31);
+      border-style: groove;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.4s ease;
+      user-select: none;    
+      font-family: myFont1;
+      box-shadow: 0 4px 8px rgba(0,0,0,1.5);
+    }
+
+    #drawCardBtn:hover {
+      transform: scale(1.05);
+      background: rgba(127, 105, 59, 0.76);
+       box-shadow: 0 4px 8px rgba(234, 196, 119, 0.5);
+    }
+
+    .nightmare-name {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: myFont1, Arial, sans-serif;
+      user-select: none;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+
+    @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+   @keyframes shuffle {
+  0% {
+    transform: rotateY(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.3);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.shuffle-animate {
+  animation: shuffle 0.6s ease-in-out;
+}
+@keyframes draw-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(720deg); /* 2 full spins */
+  }
+}
+
+.spin-before-load {
+  animation: draw-spin 1s ease-in-out;
+}
+
+.credits h3{
+    color: #ffffff;
+    font-family: myFont;
+    font-size: 9px;
+   
+}
+
+#volumeControl {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 6px;
+  background: rgb(140, 139, 139);
+  border-radius: 5px;
+  outline: none;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Chrome, Safari, Edge */
+#volumeControl::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Firefox */
+#volumeControl::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+}
+
+#volumeControl::-moz-range-track {
+  background: white;
+  height: 6px;
+  border-radius: 5px;
+}
+
+#volumeControl::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
